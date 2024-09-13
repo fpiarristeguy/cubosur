@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cubo Sur - Contenido de Redes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #e4e4e4, #e63369, #191045);
+            color: #191045;
+        }
+
+        h1, h2, p {
+            text-align: center;
+        }
+
+        .section {
+            padding: 50px 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #e63369, #191045);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .header h1 i {
+            font-style: italic;
+        }
+
+        .header img {
+            margin-top: 20px;
+            width: 150px;
+        }
+
+        /* Services */
+        .services, .packs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .services h2, .packs h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .service-item, .pack-item {
+            background-color: #e63369;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 90%;
+            max-width: 600px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .service-item:hover, .pack-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: #191045;
+            color: white; /* Letras en blanco al hacer hover */
+        }
+
+        .pack-item-details {
+            display: none;
+            background-color: #e63369; /* Fondo rosa */
+            color: black; /* Letras negras */
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .pack-item:hover .pack-item-details {
+            display: block;
+            color: white; /* Letras en blanco cuando se despliega el contenido */
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-logo {
+            width: 50px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #191045;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #e63369;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+
+            .service-item, .pack-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Portada -->
+    <header class="header">
+        <h1><i>CUBO SUR</i><br>Contenido de redes</h1>
+        <img src="./logo.svg" alt="Cubo Sur Logo">
+    </header>
+
+    <!-- Servicios -->
+    <section class="section services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-item" onclick="openWhatsApp('Diseño de posteos')">Diseño de posteos</div>
+        <div class="service-item" onclick="openWhatsApp('Edición de video')">Edición de video</div>
+        <div class="service-item" onclick="openWhatsApp('Animaciones')">Animaciones</div>
+        <div class="service-item" onclick="openWhatsApp('Fotografía')">Fotografía</div>
+        <div class="service-item" onclick="openWhatsApp('Grabación de video')">Grabación de video</div>
+        <div class="service-item" onclick="openWhatsApp('Investigación de competencias')">Investigación de competencias</div>
+        <div class="service-item" onclick="openWhatsApp('Investigación de público objetivo')">Investigación de público objetivo</div>
+        <div class="service-item" onclick="openWhatsApp('Guionado de contenido')">Guionado de contenido</div>
+        <div class="service-item" onclick="openWhatsApp('Programación de posteos')">Programación de posteos</div>
+        <div class="service-item" onclick="openWhatsApp('Redacción de copys')">Redacción de copys</div>
+        <div class="service-item" onclick="openWhatsApp('Reporte de métricas')">Reporte de métricas</div>
+        <div class="service-item" onclick="openWhatsApp('Gestión de anuncios pagos')">Gestión de anuncios pagos</div>
+        <div class="service-item" onclick="openWhatsApp('Mensajería en redes')">Mensajería en redes</div>
+    </section>
+
+    <!-- Packs -->
+    <section class="section packs">
+        <h2>Nuestros Packs</h2>
+
+        <div class="pack-item" onclick="openWhatsApp('Pack Inicial')">
+            PACK INICIAL
+            <div class="pack-item-details">
+                Diseño de 5 imágenes para posteos<br>
+                2 videos/animaciones para stories<br>
+                Investigación de competencias<br>
+                Investigación de público objetivo<br>
+                Guionado de contenido<br>
+                Redacción de copys
+            </div>
+        </div>
+
+        <div class="pack-item" onclick="openWhatsApp('Pack Crecer')">
+            PACK CRECER
+            <div class="pack-item-details">
+                Diseño de 10 imágenes para posteos<br>
+                5 videos/animaciones para stories<br>
+                1 video de aprox. 1 min<br>
+                Investigación de competencias<br>
+                Investigación de público objetivo<br>
+                Guionado de contenido<br>
+                Programación de posteos<br>
+                Redacción de copys
+            </div>
+        </div>
+
+        <div class="pack-item" onclick="openWhatsApp('Pack Diferencial')">
+            PACK DIFERENCIAL
+            <div class="pack-item-details">
+                Diseño de 15 imágenes para posteos<br>
+                10 videos/animaciones para stories<br>
+                2 videos de aprox. 1 min<br>
+                Investigación de competencias<br>
+                Investigación de público objetivo<br>
+                Guionado de contenido<br>
+                Redacción de copys<br>
+                Programación de posteos<br>
+                Reporte de métricas
+            </div>
+        </div>
+
+        <div class="pack-item" onclick="openWhatsApp('Pack Profesional')">
+            PACK PROFESIONAL
+            <div class="pack-item-details">
+                Diseño de 20 imágenes para posteos<br>
+                15 videos/animaciones para stories<br>
+                5 videos de aprox. 1 min<br>
+                Investigación de competencias<br>
+                Investigación de público objetivo<br>
+                Guionado de contenido<br>
+                Redacción de copys<br>
+                Programación de posteos<br>
+                Reporte de métricas<br>
+                Gestión de publicidad paga
+            </div>
+        </div>
+
+        <div class="pack-item" onclick="openWhatsApp('Pack Completo')">
+            PACK COMPLETO
+            <div class="pack-item-details">
+                Diseño de 30 imágenes para posteos<br>
+                20 videos/animaciones para stories<br>
+                10 videos de aprox. 1 min<br>
+                Investigación de competencias<br>
+                Investigación de público objetivo<br>
+                Guionado de contenido<br>
+                Programación de posteos<br>
+                Reporte de métricas<br>
+                Gestión de publicidad paga<br>
+                Mensajería en redes
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Contactate con nosotros</h2>
+        <a href="https://wa.me/5491157033418" target="_blank">
+            <img src="./whatsapp.png" alt="WhatsApp" class="whatsapp-logo">
+        </a>
+        <p>© 2024 Cubo Sur - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function openWhatsApp(service) {
+            const whatsappNumber = "5491157033418";
+            const message = `Hola! me interesa ${service}`;
+            const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+
+</html>

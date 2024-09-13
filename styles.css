@@ -1,0 +1,75 @@
+/* Instrucciones ocultas: Utilizar colores #e4e4e4, #191045 y #e63369 */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e4e4e4;
+    color: #191045;
+}
+
+header {
+    background-color: #191045;
+    color: #e4e4e4;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    /* Instrucciones ocultas: Asegurar que el logo se vea correctamente */
+}
+
+.packs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pack {
+    background-color: #fff;
+    border: 2px solid #191045;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pack:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.pack h3 {
+    color: #191045;
+}
+
+.pack ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pack li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #191045;
+    color: #e4e4e4;
+    text-align: center;
+    padding: 20px;
+}
+
+.whatsapp-logo {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+/* Accento en los elementos clickeables */
+.pack:hover h3 {
+    color: #e63369;
+}
+
